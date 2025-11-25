@@ -165,7 +165,6 @@
                                     Naam *
                                 </label>
                                 <input type="text" id="name" name="name" required placeholder="Uw volledige naam">
-                                <div class="form-focus"></div>
                             </div>
                             <div class="form-group-premium">
                                 <label for="email">
@@ -173,7 +172,6 @@
                                     Email *
                                 </label>
                                 <input type="email" id="email" name="email" required placeholder="uw.email@voorbeeld.be">
-                                <div class="form-focus"></div>
                             </div>
                         </div>
                         
@@ -184,7 +182,6 @@
                                     Telefoon
                                 </label>
                                 <input type="tel" id="phone" name="phone" placeholder="+32 474 07 90 87">
-                                <div class="form-focus"></div>
                             </div>
                             <div class="form-group-premium">
                                 <label for="company">
@@ -192,7 +189,6 @@
                                     Bedrijf
                                 </label>
                                 <input type="text" id="company" name="company" placeholder="Uw bedrijfsnaam">
-                                <div class="form-focus"></div>
                             </div>
                         </div>
                         
@@ -211,7 +207,6 @@
                                     <option value="consulting">Consulting</option>
                                     <option value="other">Anders</option>
                                 </select>
-                                <div class="form-focus"></div>
                             </div>
                             <div class="form-group-premium">
                                 <label for="budget">
@@ -225,7 +220,6 @@
                                     <option value="15000-30000">€15.000 - €30.000</option>
                                     <option value="30000+">€30.000+</option>
                                 </select>
-                                <div class="form-focus"></div>
                             </div>
                         </div>
                         
@@ -235,7 +229,6 @@
                                 Uw Bericht *
                             </label>
                             <textarea id="message" name="message" rows="6" placeholder="Vertel ons over uw project, uitdagingen en doelen..." required></textarea>
-                            <div class="form-focus"></div>
                         </div>
                         
                         <div class="form-actions">
@@ -323,57 +316,81 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100
-    });
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
 
-    // Form handling
-    document.addEventListener('DOMContentLoaded', function() {
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
-        const resetForm = document.getElementById('resetForm');
-        const submitBtn = contactForm.querySelector('.form-submit');
-        const loadingBtn = submitBtn.querySelector('.btn-loading');
+// Form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const resetForm = document.getElementById('resetForm');
+    const submitBtn = contactForm.querySelector('.form-submit');
+    const loadingBtn = submitBtn.querySelector('.btn-loading');
 
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            submitBtn.disabled = true;
-            loadingBtn.style.display = 'inline-block';
-            
-            // Simulate form submission
-            setTimeout(() => {
-                // Hide form and show success message
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Show loading state
+        submitBtn.disabled = true;
+        loadingBtn.style.display = 'inline-block';
+
+        // Verzamel form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            company: document.getElementById('company').value,
+            service: document.getElementById('service').value,
+            budget: document.getElementById('budget').value,
+            message: document.getElementById('message').value
+        };
+
+        try {
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
                 contactForm.style.display = 'none';
                 formSuccess.style.display = 'block';
-                
-                // Reset button state
-                submitBtn.disabled = false;
-                loadingBtn.style.display = 'none';
-            }, 2000);
+            } else {
+                alert(result.message || 'Er ging iets mis.');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Er ging iets mis bij het verzenden van uw bericht.');
+        }
+
+        // Reset button state
+        submitBtn.disabled = false;
+        loadingBtn.style.display = 'none';
+    });
+
+    resetForm.addEventListener('click', function() {
+        contactForm.reset();
+        contactForm.style.display = 'block';
+        formSuccess.style.display = 'none';
+    });
+
+    // Add focus effects to form inputs
+    const formInputs = contactForm.querySelectorAll('input, select, textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
         });
 
-        resetForm.addEventListener('click', function() {
-            contactForm.reset();
-            contactForm.style.display = 'block';
-            formSuccess.style.display = 'none';
-        });
-
-        // Add focus effects to form inputs
-        const formInputs = contactForm.querySelectorAll('input, select, textarea');
-        formInputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', function() {
-                if (!this.value) {
-                    this.parentElement.classList.remove('focused');
-                }
-            });
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentElement.classList.remove('focused');
+            }
         });
     });
+});
 </script>

@@ -69,30 +69,56 @@ app.get('/privacy-policy', (req, res) => {
   });
 });
 
-// Contact form processing
+const nodemailer = require('nodemailer');
+
 app.post('/contact', async (req, res) => {
   try {
     const { name, email, phone, company, service, budget, message } = req.body;
-    
-    // Hier zou je e-mail functionaliteit toevoegen
-    console.log('Nieuwe lead:', {
-      name, email, phone, company, service, budget, message
+
+    // Nodemailer transporter (bijv. Gmail SMTP)
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'abdellaouimounir407@gmail.com',       // vervang door je Gmail
+        pass: 'smyrvkkqmmrflliq '           // gebruik een App Password
+      }
     });
-    
-    // Simuleer verwerking
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
+    // E-mail inhoud
+    const mailOptions = {
+      from: email,
+      to: 'abdellaouimounir407@gmail.com',
+      subject: 'Nieuw bericht van contactformulier',
+      html: `
+        <h3>Nieuw bericht van het contactformulier</h3>
+        <p><strong>Naam:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefoon:</strong> ${phone}</p>
+        <p><strong>Bedrijf:</strong> ${company}</p>
+        <p><strong>Dienst:</strong> ${service}</p>
+        <p><strong>Budget:</strong> ${budget}</p>
+        <p><strong>Bericht:</strong><br/>${message}</p>
+      `
+    };
+
+    // Verstuur e-mail
+    await transporter.sendMail(mailOptions);
+
+    // Response naar front-end
     res.json({ 
       success: true, 
       message: 'Bedankt voor uw bericht! We nemen binnen 24 uur contact met u op.' 
     });
+    
   } catch (error) {
+    console.error('E-mail fout:', error);
     res.status(500).json({ 
       success: false, 
-      message: 'Er ging iets mis. Probeer het later opnieuw.' 
+      message: 'Er ging iets mis bij het verzenden van uw bericht. Probeer het later opnieuw.' 
     });
   }
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

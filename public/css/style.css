@@ -253,7 +253,7 @@ p {
 .title-line {
     display: block;
     margin-bottom: var(--space-3);
-    color: rgba(255, 255, 255, 0.95);
+    color: #2d5d45;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -290,7 +290,7 @@ p {
     font-size: var(--text-xl);
     line-height: 1.7;
     margin-bottom: var(--space-12);
-    color: rgba(255, 255, 255, 0.85);
+    color:#2d5d45;
     font-weight: 400;
     max-width: 90%;
     animation: slideInUp 0.8s ease-out 0.6s both;
@@ -441,13 +441,13 @@ p {
 }
 
 .card-2 {
-    top: 60%;
+    top: 75%;
     right: 5%;
     animation-delay: 2s;
 }
 
 .card-3 {
-    bottom: 25%;
+    bottom: 20%;
     left: 5%;
     animation-delay: 4s;
 }
@@ -975,15 +975,15 @@ p {
 
 .logo-link:hover { transform: translateY(-1px); }
 
+
 .logo-icon {
-    width: 42px; height: 42px;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-lg);
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
-    font-size: var(--text-xl);
+    /* Verwijder kleur en font-size, want die gelden voor iconen */
+    /* background: var(--gradient-primary); */ /* optioneel */
+    border-radius: var(--radius-lg); /* als je afgeronde hoeken wilt */
 }
 
 .logo-text {
@@ -3568,16 +3568,23 @@ input:disabled + .toggle-slider {
     .hero-grid {
         gap: var(--space-16);
     }
-    
+
     .hero-visual {
         height: 550px;
     }
+    .hero-glow{
+        display: none;
+    }
+    
 }
 
 @media (max-width: 991px) {
     .hero {
         padding: 140px 0 100px;
         text-align: center;
+    }
+        .hero-glow{
+        display: none;
     }
     
     .hero-grid {
@@ -3666,13 +3673,20 @@ input:disabled + .toggle-slider {
         width: 100%;
         max-width: 280px;
     }
+        .hero-visual{display: none;}
+
 }
 
 @media (max-width: 768px) {
+    .hero-glow{
+        display: none;
+    }
+
     .hero {
         padding: 120px 0 80px;
     }
-    
+        .hero-visual{display: none;}
+
     .hero-title {
         font-size: clamp(2.5rem, 8vw, 4rem);
         margin-bottom: var(--space-6);
@@ -3890,10 +3904,15 @@ input:disabled + .toggle-slider {
 }
 
 @media (max-width: 480px) {
+    
+    .hero-glow{
+        display: none;
+    }
+    
     .hero {
         padding: 100px 0 60px;
     }
-    
+
     .hero-badge {
         margin-bottom: var(--space-8);
         font-size: var(--text-xs);
@@ -3959,7 +3978,7 @@ input:disabled + .toggle-slider {
     .btn-large { padding: var(--space-4) var(--space-6); font-size: var(--text-base); }
     
     .service-icon { width: 60px; height: 60px; font-size: var(--text-xl); }
-    
+    .hero-visual{display: none;}
     .nav-container { padding: var(--space-3) 0; }
     .logo-icon { width: 36px; height: 36px; }
     .logo-text { font-size: var(--text-lg); }
