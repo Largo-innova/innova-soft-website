@@ -1,0 +1,39 @@
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="/" class="logo-link">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <span class="logo-text">Innova Soft</span>
+            </a>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+            <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">
+                <span>Home</span>
+            </a>
+            <a href="/diensten" class="nav-link <%= currentPage === 'diensten' ? 'active' : '' %>">
+                <span>Diensten</span>
+            </a>
+            <a href="/portfolio" class="nav-link <%= currentPage === 'portfolio' ? 'active' : '' %>">
+                <span>Portfolio</span>
+            </a>
+            <a href="/over-ons" class="nav-link <%= currentPage === 'over-ons' ? 'active' : '' %>">
+                <span>Over Ons</span>
+            </a>
+            <div class="nav-cta">
+                <a href="/contact" class="btn btn-primary btn-small">
+                    <i class="fas fa-paper-plane"></i>
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
