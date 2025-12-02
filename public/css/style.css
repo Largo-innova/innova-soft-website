@@ -1729,7 +1729,6 @@ main {
         var(--primary-800) 30%, 
         var(--primary-700) 70%, 
         var(--accent-600) 100%);
-    padding: var(--space-24) 0 var(--space-20);
     position: relative;
     overflow: hidden;
 }
