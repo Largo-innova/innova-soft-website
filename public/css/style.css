@@ -134,7 +134,7 @@ h6 { font-size: var(--text-lg); }
 
 p {
     margin-bottom: var(--space-4);
-    color: #14281f;
+    color: #ffffff;
     line-height: 1.7;
 }
 
@@ -3697,6 +3697,41 @@ input:disabled + .toggle-slider {
 }
 
 @media (max-width: 768px) {
+        [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+        .timeline-item {
+        animation: none !important;
+    }
+    .method-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .method-content h3 {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-1);
+    }
+    
+    .method-detail {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-1);
+        display: block;
+    }
+    
+    .method-description {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-2);
+    }
+    
+    .method-action {
+        display: inline-block;
+        margin: 0 auto;
+        padding: var(--space-2) var(--space-4);
+    }
+    
     .hero-glow{
         display: none;
     }
