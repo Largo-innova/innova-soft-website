@@ -1,594 +1,1314 @@
 <%- include('partials/header') %>
 
-    <!-- Premium Portfolio Hero -->
-    <section class="page-header portfolio-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-trophy"></i>
-                    <span>Bewezen Resultaten</span>
-                </div>
-                <h1>Ons <span class="gradient-text">Portfolio</span></h1>
-                <p class="hero-description">Ontdek onze succesvolle .NET projecten die bedrijven transformeren</p>
-                
-                
-            </div>
-        </div>
-        <div class="hero-background">
-            <div class="hero-pattern"></div>
-            <div class="hero-glow"></div>
-        </div>
-    </section>
-
-
-
-    <!-- Premium Portfolio Section -->
-    <section class="portfolio-showcase">
-        <div class="container">
-            <div class="section-header">
-                <h2>Succes <span class="gradient-text">Verhalen</span></h2>
-                <p class="section-subtitle">Echte projecten, meetbare resultaten</p>
-            </div>
-
-            <!-- Premium Filters -->
-            <div class="portfolio-filters-premium">
-                <button class="filter-btn-premium active" data-filter="all">
-                    <i class="fas fa-th-large"></i>
-                    Alle Projecten
-                </button>
-                <button class="filter-btn-premium" data-filter="website">
-                    <i class="fas fa-globe"></i>
-                    Websites
-                </button>
-                <button class="filter-btn-premium" data-filter="software">
-                    <i class="fas fa-code"></i>
-                    Software
-                </button>
-                <button class="filter-btn-premium" data-filter="api">
-                    <i class="fas fa-cloud"></i>
-                    API's
-                </button>
-                <button class="filter-btn-premium" data-filter="database">
-                    <i class="fas fa-database"></i>
-                    Databases
-                </button>
-            </div>
-
-            <!-- Premium Portfolio Grid -->
-            <div class="portfolio-grid-premium">
-                <!-- E-commerce Platform -->
-                <div class="portfolio-card" data-category="website" data-aos="fade-up">
-                    <div class="portfolio-image-wrapper">
-                        <div class="portfolio-image">
-                            <div class="image-overlay">
-                                <i class="fas fa-shopping-cart fa-3x"></i>
-                                <span class="project-category">E-commerce</span>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-star"></i>
-                                Featured
-                            </div>
-                        </div>
-                        <div class="portfolio-hover">
-                            <div class="hover-content">
-                                <a href="#" class="view-project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Bekijk Project
-                                </a>
-                                <a href="#" class="view-details">
-                                    <i class="fas fa-info-circle"></i>
-                                    Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="project-meta">
-                            <span class="project-duration">4 maanden</span>
-                            <span class="project-budget">€25.000</span>
-                        </div>
-                        <h3>E-commerce Platform</h3>
-                        <p class="project-description">Volledig custom e-commerce platform met geïntegreerd betalingssysteem en inventory management.</p>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-tags">
-                                <span class="tech-tag">ASP.NET Core</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">SQL Server</span>
-                                <span class="tech-tag">Stripe API</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-results">
-                            <div class="result-item">
-                                <i class="fas fa-chart-line success"></i>
-                                <span>200% groei in online verkopen</span>
-                            </div>
-                            <div class="result-item">
-                                <i class="fas fa-bolt success"></i>
-                                <span>3x snellere laadtijden</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Business Analytics Tool -->
-                <div class="portfolio-card" data-category="software" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-image-wrapper">
-                        <div class="portfolio-image">
-                            <div class="image-overlay">
-                                <i class="fas fa-chart-line fa-3x"></i>
-                                <span class="project-category">Business Intelligence</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-hover">
-                            <div class="hover-content">
-                                <a href="#" class="view-project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Bekijk Project
-                                </a>
-                                <a href="#" class="view-details">
-                                    <i class="fas fa-info-circle"></i>
-                                    Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="project-meta">
-                            <span class="project-duration">3 maanden</span>
-                            <span class="project-budget">€18.000</span>
-                        </div>
-                        <h3>Business Analytics Tool</h3>
-                        <p class="project-description">Desktop applicatie voor real-time data analyse en rapportage voor middelgrote bedrijven.</p>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-tags">
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">WPF</span>
-                                <span class="tech-tag">Entity Framework</span>
-                                <span class="tech-tag">Chart.js</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-results">
-                            <div class="result-item">
-                                <i class="fas fa-clock success"></i>
-                                <span>15 uur/week tijdswinst</span>
-                            </div>
-                            <div class="result-item">
-                                <i class="fas fa-chart-pie success"></i>
-                                <span>Real-time dashboards</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- REST API -->
-                <div class="portfolio-card" data-category="api" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-image-wrapper">
-                        <div class="portfolio-image">
-                            <div class="image-overlay">
-                                <i class="fas fa-exchange-alt fa-3x"></i>
-                                <span class="project-category">FinTech API</span>
-                            </div>
-                            <div class="project-badge security">
-                                <i class="fas fa-shield-alt"></i>
-                                Secure
-                            </div>
-                        </div>
-                        <div class="portfolio-hover">
-                            <div class="hover-content">
-                                <a href="#" class="view-project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Bekijk Project
-                                </a>
-                                <a href="#" class="view-details">
-                                    <i class="fas fa-info-circle"></i>
-                                    Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="project-meta">
-                            <span class="project-duration">5 maanden</span>
-                            <span class="project-budget">€35.000</span>
-                        </div>
-                        <h3>REST API voor Financiële Dienst</h3>
-                        <p class="project-description">Veilige API voor financiële transacties en data management met real-time processing.</p>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-tags">
-                                <span class="tech-tag">ASP.NET Web API</span>
-                                <span class="tech-tag">JWT</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Redis</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-results">
-                            <div class="result-item">
-                                <i class="fas fa-server success"></i>
-                                <span>99.9% uptime gegarandeerd</span>
-                            </div>
-                            <div class="result-item">
-                                <i class="fas fa-lock success"></i>
-                                <span>Bank-level security</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Database Migration -->
-                <div class="portfolio-card" data-category="database" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-image-wrapper">
-                        <div class="portfolio-image">
-                            <div class="image-overlay">
-                                <i class="fas fa-database fa-3x"></i>
-                                <span class="project-category">Cloud Migration</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-hover">
-                            <div class="hover-content">
-                                <a href="#" class="view-project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Bekijk Project
-                                </a>
-                                <a href="#" class="view-details">
-                                    <i class="fas fa-info-circle"></i>
-                                    Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="project-meta">
-                            <span class="project-duration">2 maanden</span>
-                            <span class="project-budget">€12.000</span>
-                        </div>
-                        <h3>Database Migratie Project</h3>
-                        <p class="project-description">Migratie van on-premise database naar Azure cloud oplossing met performance optimalisatie.</p>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-tags">
-                                <span class="tech-tag">SQL Server</span>
-                                <span class="tech-tag">Azure SQL</span>
-                                <span class="tech-tag">ETL</span>
-                                <span class="tech-tag">Power BI</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-results">
-                            <div class="result-item">
-                                <i class="fas fa-tachometer-alt success"></i>
-                                <span>300% performance verbetering</span>
-                            </div>
-                            <div class="result-item">
-                                <i class="fas fa-euro-sign success"></i>
-                                <span>40% kostenbesparing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Trust Bar -->
-<section class="trust-bar">
+<!-- Premium Portfolio Hero -->
+<section class="page-header portfolio-hero">
     <div class="container">
-        <div class="trust-content">
-            <p class="trust-title">Technologie Partners & Platforms</p>
-            <div class="trust-logos-scroll">
-                <div class="trust-logo">
-                    <i class="fab fa-microsoft"></i>
-                    <span>.NET Foundation</span>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-trophy"></i>
+                <span>Bewezen Resultaten</span>
+            </div>
+            <h1>Onze <span class="gradient-text">Toekomstige</span> Projecten</h1>
+            <p class="hero-description">We zijn klaar om aan uw project te beginnen. Bekijk hier de soorten projecten die we kunnen realiseren.</p>
+            
+            <div class="hero-badge">
+                <i class="fas fa-seedling"></i>
+                <span>Starter Friendly - Klaar voor uw project</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-background">
+        <div class="hero-pattern"></div>
+        <div class="hero-glow"></div>
+    </div>
+</section>
+
+<!-- Premium Portfolio Section -->
+<section class="portfolio-showcase">
+    <div class="container">
+        <div class="section-header">
+            <h2>Succes <span class="gradient-text">Verhalen</span></h2>
+            <p class="section-subtitle">Echte projecten, meetbare resultaten</p>
+        </div>
+
+        <!-- Premium Filters -->
+        <div class="portfolio-filters-premium">
+            <button class="filter-btn-premium active" data-filter="all">
+                <i class="fas fa-th-large"></i>
+                Alle Projecten
+            </button>
+            <button class="filter-btn-premium" data-filter="website">
+                <i class="fas fa-globe"></i>
+                Websites
+            </button>
+            <button class="filter-btn-premium" data-filter="software">
+                <i class="fas fa-code"></i>
+                Software
+            </button>
+            <button class="filter-btn-premium" data-filter="api">
+                <i class="fas fa-cloud"></i>
+                API's
+            </button>
+            <button class="filter-btn-premium" data-filter="database">
+                <i class="fas fa-database"></i>
+                Databases
+            </button>
+        </div>
+
+        <!-- Premium Portfolio Grid -->
+        <div class="portfolio-grid-premium">
+            <!-- E-commerce Platform -->
+            <div class="portfolio-card" data-category="website" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <div class="image-overlay">
+                                    <i class="fas fa-shopping-cart fa-3x"></i>
+                                    <span class="project-category">E-commerce</span>
+                                </div>
+                                <div class="project-badge">
+                                    <i class="fas fa-star"></i>
+                                    Featured
+                                </div>
+                            </div>
+                            <div class="portfolio-hover">
+                                <div class="hover-content">
+
+                                    
+                                    <button class="view-details">
+                                        <i class="fas fa-info-circle"></i>
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-meta">
+                                <span class="project-duration">4 maanden</span>
+                            </div>
+                            <h3>E-commerce Platform</h3>
+                            <p class="project-description">Volledig custom e-commerce platform met geïntegreerd betalingssysteem en inventory management.</p>
+                            
+                            <div class="tech-stack">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">ASP.NET Core</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">Stripe API</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-results">
+                                <div class="result-item">
+                                    <i class="fas fa-chart-line success"></i>
+                                    <span>200% groei in online verkopen</span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="fas fa-bolt success"></i>
+                                    <span>3x snellere laadtijden</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-content">
+                            <button class="back-button">
+                                <i class="fas fa-arrow-left"></i>
+                                Terug
+                            </button>
+                            <h3>E-commerce Platform Details</h3>
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Uitdaging</h4>
+                                    <p>Het bedrijf had een verouderd e-commerce systeem dat niet meeschaalde met hun groei.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Oplossing</h4>
+                                    <p>Custom ASP.NET Core platform met React frontend, geïntegreerd met Stripe voor betalingen.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Resultaten</h4>
+                                    <ul>
+                                        <li>200% groei in online verkopen</li>
+                                        <li>3x snellere laadtijden</li>
+                                        <li>99.9% uptime</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="trust-logo">
-                    <i class="fab fa-aws"></i>
-                    <span>AWS</span>
+            </div>
+
+            <!-- Business Analytics Tool -->
+            <div class="portfolio-card" data-category="software" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <div class="image-overlay">
+                                    <i class="fas fa-chart-line fa-3x"></i>
+                                    <span class="project-category">Business Intelligence</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-hover">
+                                <div class="hover-content">
+
+                                    <button class="view-details">
+                                        <i class="fas fa-info-circle"></i>
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-meta">
+                                <span class="project-duration">3 maanden</span>
+                            </div>
+                            <h3>Business Analytics Tool</h3>
+                            <p class="project-description">Desktop applicatie voor real-time data analyse en rapportage voor middelgrote bedrijven.</p>
+                            
+                            <div class="tech-stack">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">WPF</span>
+                                    <span class="tech-tag">Entity Framework</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-results">
+                                <div class="result-item">
+                                    <i class="fas fa-clock success"></i>
+                                    <span>15 uur/week tijdswinst</span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="fas fa-chart-pie success"></i>
+                                    <span>Real-time dashboards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-content">
+                            <button class="back-button">
+                                <i class="fas fa-arrow-left"></i>
+                                Terug
+                            </button>
+                            <h3>Analytics Tool Details</h3>
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Uitdaging</h4>
+                                    <p>Handmatige data-analyse kostte het team 20+ uur per week.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Oplossing</h4>
+                                    <p>WPF applicatie met real-time dashboards en automatische rapportage.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Resultaten</h4>
+                                    <ul>
+                                        <li>15 uur/week tijdswinst</li>
+                                        <li>Real-time inzichten</li>
+                                        <li>Betere besluitvorming</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="trust-logo">
-                    <i class="fab fa-docker"></i>
-                    <span>Docker</span>
+            </div>
+
+            <!-- REST API -->
+            <div class="portfolio-card" data-category="api" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <div class="image-overlay">
+                                    <i class="fas fa-exchange-alt fa-3x"></i>
+                                    <span class="project-category">FinTech API</span>
+                                </div>
+                                <div class="project-badge security">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Secure
+                                </div>
+                            </div>
+                            <div class="portfolio-hover">
+                                <div class="hover-content">
+
+                                    <button class="view-details">
+                                        <i class="fas fa-info-circle"></i>
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-meta">
+                                <span class="project-duration">5 maanden</span>
+                            </div>
+                            <h3>REST API voor Financiële Dienst</h3>
+                            <p class="project-description">Veilige API voor financiële transacties en data management met real-time processing.</p>
+                            
+                            <div class="tech-stack">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">ASP.NET Web API</span>
+                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Redis</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-results">
+                                <div class="result-item">
+                                    <i class="fas fa-server success"></i>
+                                    <span>99.9% uptime gegarandeerd</span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="fas fa-lock success"></i>
+                                    <span>Bank-level security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-content">
+                            <button class="back-button">
+                                <i class="fas fa-arrow-left"></i>
+                                Terug
+                            </button>
+                            <h3>API Project Details</h3>
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Uitdaging</h4>
+                                    <p>Een veilige, schaalbare API nodig voor financiële transacties.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Oplossing</h4>
+                                    <p>ASP.NET Web API met JWT authenticatie en Docker containers.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Resultaten</h4>
+                                    <ul>
+                                        <li>99.9% uptime</li>
+                                        <li>Bank-level security</li>
+                                        <li>Schaalbaar ontwerp</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="trust-logo">
-                    <i class="fab fa-google"></i>
-                    <span>Google Cloud</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-git-alt"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-microsoft"></i>
-                    <span>Azure</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>SQL Server</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-angular"></i>
-                    <span>Angular</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-cloud"></i>
-                    <span>Azure DevOps</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-gitlab"></i>
-                    <span>GitLab</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-vuejs"></i>
-                    <span>Vue.js</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-window-restore"></i>
-                    <span>Visual Studio</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>MySQL</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-code-branch"></i>
-                    <span>Bitbucket</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>MongoDB</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>Oracle Cloud</span>
-                </div>
-                
-                <!-- Duplicate set for seamless looping -->
-                <div class="trust-logo">
-                    <i class="fab fa-microsoft"></i>
-                    <span>.NET Foundation</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-aws"></i>
-                    <span>AWS</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-docker"></i>
-                    <span>Docker</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-google"></i>
-                    <span>Google Cloud</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-git-alt"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-microsoft"></i>
-                    <span>Azure</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>SQL Server</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-angular"></i>
-                    <span>Angular</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-cloud"></i>
-                    <span>Azure DevOps</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-gitlab"></i>
-                    <span>GitLab</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fab fa-vuejs"></i>
-                    <span>Vue.js</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-window-restore"></i>
-                    <span>Visual Studio</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>MySQL</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-code-branch"></i>
-                    <span>Bitbucket</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>MongoDB</span>
-                </div>
-                <div class="trust-logo">
-                    <i class="fas fa-database"></i>
-                    <span>Oracle Cloud</span>
+            </div>
+
+            <!-- Database Migration -->
+            <div class="portfolio-card" data-category="database" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <div class="image-overlay">
+                                    <i class="fas fa-database fa-3x"></i>
+                                    <span class="project-category">Cloud Migration</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-hover">
+                                <div class="hover-content">
+
+                                    <button class="view-details">
+                                        <i class="fas fa-info-circle"></i>
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-meta">
+                                <span class="project-duration">2 maanden</span>
+                            </div>
+                            <h3>Database Migratie Project</h3>
+                            <p class="project-description">Migratie van on-premise database naar Azure cloud oplossing met performance optimalisatie.</p>
+                            
+                            <div class="tech-stack">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">Azure SQL</span>
+                                    <span class="tech-tag">ETL</span>
+                                    <span class="tech-tag">Power BI</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-results">
+                                <div class="result-item">
+                                    <i class="fas fa-tachometer-alt success"></i>
+                                    <span>300% performance verbetering</span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="fas fa-euro-sign success"></i>
+                                    <span>40% kostenbesparing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-content">
+                            <button class="back-button">
+                                <i class="fas fa-arrow-left"></i>
+                                Terug
+                            </button>
+                            <h3>Database Migratie Details</h3>
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Uitdaging</h4>
+                                    <p>Trage on-premise database met hoge onderhoudskosten.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Oplossing</h4>
+                                    <p>Migratie naar Azure SQL met geoptimaliseerde queries en ETL processen.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Resultaten</h4>
+                                    <ul>
+                                        <li>300% performance verbetering</li>
+                                        <li>40% kostenbesparing</li>
+                                        <li>Betere schaalbaarheid</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Wat Onze <span class="gradient-text">Klanten</span> Zeggen</h2>
-                <p class="section-subtitle">Echte feedback van tevreden partners</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-aos="fade-up">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">"</div>
-                        <p>InnovaSoft heeft ons e-commerce platform getransformeerd. De 200% groei in verkopen spreekt voor zich!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Mark de Vries</h4>
-                            <p>CEO, TechRetail</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">"</div>
-                        <p>De analytics tool heeft ons team 15 uur per week bespaard. Een onmisbaar instrument geworden!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Janssen</h4>
-                            <p>Operations Manager, DataFlow</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">"</div>
-                        <p>De database migratie naar Azure was vlekkeloos. 300% performance boost en lagere kosten!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Peter van Berg</h4>
-                            <p>CTO, CloudSolutions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Premium CTA Section -->
-    <section class="cta-premium">
-        <div class="container">
-            <div class="cta-content-premium">
-                <h2>Klaar voor Jouw <span class="gradient-text">Succesverhaal?</span></h2>
-                <p>Word de volgende tevreden klant in ons portfolio</p>
-                <div class="cta-actions">
-                    <a href="/contact" class="btn btn-primary btn-large">
-                        <i class="fas fa-paper-plane"></i>
-                        Start Jouw Project
-                    </a>
-                    <a href="/diensten" class="btn btn-outline btn-large">
-                        <i class="fas fa-search"></i>
-                        Bekijk Diensten
-                    </a>
+<!-- Project Simulation Modal -->
+<div class="project-modal" id="projectModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-header">
+            <h3 id="modalTitle">Project Simulatie</h3>
+            <div class="modal-tech" id="modalTech"></div>
+        </div>
+        <div class="modal-body">
+            <div class="simulation-container">
+                <div class="code-preview" id="codePreview">
+                    <!-- Code preview wordt hier ingevoegd -->
                 </div>
-                <div class="cta-guarantee">
-                    <div class="guarantee-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Gratis consultatie</span>
+                <div class="simulation-controls">
+                    <button class="control-btn" id="prevStep">
+                        <i class="fas fa-chevron-left"></i>
+                        Vorige
+                    </button>
+                    <div class="progress-indicator">
+                        <span id="currentStep">1</span> / <span id="totalSteps">4</span>
                     </div>
-                    <div class="guarantee-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Scherpe deadlines</span>
-                    </div>
-                    <div class="guarantee-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Kwaliteit gegarandeerd</span>
-                        <br>
-                    </div>
+                    <button class="control-btn" id="nextStep">
+                        Volgende
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="cta-background">
-            <div class="cta-glow"></div>
+    </div>
+</div>
+
+<!-- Trust Bar -->
+<section class="trust-bar">
+    <div class="container">
+        <div class="trust-content">
+            <p class="trust-title">Technologie Partners & Platforms</p>
+            <div class="trust-logos-scroll">
+                <!-- Je bestaande trust logos -->
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Wat Onze <span class="gradient-text">Klanten</span> Zeggen</h2>
+            <p class="section-subtitle">Echte feedback van tevreden partners</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <!-- Je bestaande testimonials -->
+        </div>
+    </div>
+</section>
+
+<!-- Premium CTA Section -->
+<section class="cta-premium">
+    <div class="container">
+        <div class="cta-content-premium">
+            <h2>Klaar voor Jouw <span class="gradient-text">Succesverhaal?</span></h2>
+            <p>Word de volgende tevreden klant in ons portfolio</p>
+            <div class="cta-actions">
+                <a href="/contact" class="btn btn-primary btn-large">
+                    <i class="fas fa-paper-plane"></i>
+                    Start Jouw Project
+                </a>
+                <a href="/diensten" class="btn btn-outline btn-large">
+                    <i class="fas fa-search"></i>
+                    Bekijk Diensten
+                </a>
+            </div>
+            <div class="cta-guarantee">
+                <div class="guarantee-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Gratis consultatie</span>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Scherpe deadlines</span>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Kwaliteit gegarandeerd</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cta-background">
+        <div class="cta-glow"></div>
+    </div>
+</section>
+
+<style>
+/* Flip Card Styles */
+.portfolio-card {
+    perspective: 1000px;
+    height: 500px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.portfolio-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+}
+
+.back-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-button {
+    align-self: flex-start;
+    background: var(--primary-500);
+    color: var(--white);
+    border: none;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: var(--transition);
+}
+
+.back-button:hover {
+    background: var(--primary-600);
+    transform: translateX(-2px);
+}
+
+.project-details {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.detail-section {
+    margin-bottom: var(--space-4);
+}
+
+.detail-section h4 {
+    color: var(--primary-600);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-lg);
+}
+
+.detail-section p,
+.detail-section ul {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.detail-section ul {
+    padding-left: var(--space-4);
+}
+
+.detail-section li {
+    margin-bottom: var(--space-1);
+}
+
+/* Project Modal Styles */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-modal);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+}
+
+.project-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: var(--gray-100);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: var(--gray-200);
+    transform: scale(1.1);
+}
+
+.modal-header {
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--gray-200);
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--white) 100%);
+}
+
+.modal-header h3 {
+    margin-bottom: var(--space-2);
+    color: var(--gray-900);
+}
+
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.modal-tech .tech-tag {
+    background: var(--primary-100);
+    color: var(--primary-700);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: var(--space-6);
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.simulation-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.code-preview {
+    background: #0a0f0b;
+    border-radius: var(--radius-xl);
+    padding: var(--space-4);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--primary-200);
+    min-height: 300px;
+    overflow-x: auto;
+}
+
+.simulation-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+.control-btn {
+    background: var(--primary-500);
+    color: var(--white);
+    border: none;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: var(--primary-600);
+    transform: translateY(-2px);
+}
+
+.control-btn:disabled {
+    background: var(--gray-400);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.progress-indicator {
+    color: var(--gray-600);
+    font-weight: 600;
+}
+
+/* Animations */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .portfolio-card {
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .card-back {
+        padding: var(--space-4);
+    }
+    
+    .modal-content {
+        margin: var(--space-4);
+        max-height: 95vh;
+    }
+    
+    .modal-body {
+        padding: var(--space-4);
+        max-height: 70vh;
+    }
+    
+    .simulation-controls {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+    
+    .control-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .code-preview {
+        font-size: var(--text-xs);
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-filters-premium {
+        gap: var(--space-2);
+    }
+    
+    .filter-btn-premium {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-xs);
+    }
+    
+    .portfolio-grid-premium {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 
 <%- include('partials/footer') %>
 
 <!-- AOS Animation Library -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100
-    });
+// Initialize AOS
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
 
-    // Portfolio Filtering
-    document.addEventListener('DOMContentLoaded', function() {
-        const filterBtns = document.querySelectorAll('.filter-btn-premium');
-        const portfolioCards = document.querySelectorAll('.portfolio-card');
+// Portfolio Filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn-premium');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                const filterValue = this.getAttribute('data-filter');
-                
-                portfolioCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 100);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Add hover effects
-        portfolioCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-            });
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
             
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
+            const filterValue = this.getAttribute('data-filter');
+            
+            portfolioCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
             });
         });
     });
+
+    // Flip functionality
+    const detailButtons = document.querySelectorAll('.view-details');
+    const backButtons = document.querySelectorAll('.back-button');
+    
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.portfolio-card');
+            card.classList.add('flipped');
+        });
+    });
+    
+    backButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.portfolio-card');
+            card.classList.remove('flipped');
+        });
+    });
+
+    // Project Simulation Modal
+    const projectButtons = document.querySelectorAll('.view-project');
+    const modal = document.getElementById('projectModal');
+    const modalClose = document.querySelector('.modal-close');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalTech = document.getElementById('modalTech');
+    const codePreview = document.getElementById('codePreview');
+    const prevStep = document.getElementById('prevStep');
+    const nextStep = document.getElementById('nextStep');
+    const currentStep = document.getElementById('currentStep');
+    const totalSteps = document.getElementById('totalSteps');
+
+    // Project simulations data
+    const projectSimulations = {
+        ecommerce: {
+            title: "E-commerce Platform Simulatie",
+            tech: ['ASP.NET Core', 'React', 'SQL Server', 'Stripe API'],
+            steps: [
+                {
+                    title: "Database Ontwerp",
+                    code: `// E-commerce Database Schema
+public class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    public string Description { get; set; }
+    public int Stock { get; set; }
+}
+
+public class Order
+{
+    public int Id { get; set; }
+    public string CustomerEmail { get; set; }
+    public decimal TotalAmount { get; set; }
+    public DateTime OrderDate { get; set; }
+    public List<OrderItem> Items { get; set; }
+}`
+                },
+                {
+                    title: "API Controller",
+                    code: `// Product Controller
+[ApiController]
+[Route("api/[controller]")]
+public class ProductsController : ControllerBase
+{
+    private readonly IProductService _productService;
+
+    [HttpGet]
+    public async Task<ActionResult<List<Product>>> GetProducts()
+    {
+        var products = await _productService.GetAllAsync();
+        return Ok(products);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> CreateProduct(Product product)
+    {
+        await _productService.CreateAsync(product);
+        return CreatedAtAction(nameof(GetProducts), new { id = product.Id }, product);
+    }
+}`
+                },
+                {
+                    title: "React Component",
+                    code: `// Product List Component
+import React, { useState, useEffect } from 'react';
+
+const ProductList = () => {
+    const [products, setProducts] = useState([]);
+    
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const fetchProducts = async () => {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        setProducts(data);
+    };
+
+    return (
+        <div className="product-grid">
+            {products.map(product => (
+                <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+    );
+};`
+                },
+                {
+                    title: "Stripe Integration",
+                    code: `// Payment Service
+public class PaymentService : IPaymentService
+{
+    private readonly PaymentIntentService _paymentIntentService;
+
+    public async Task<PaymentIntent> CreatePaymentIntentAsync(decimal amount)
+    {
+        var options = new PaymentIntentCreateOptions
+        {
+            Amount = (long)(amount * 100),
+            Currency = "eur",
+            PaymentMethodTypes = new List<string> { "card" }
+        };
+
+        return await _paymentIntentService.CreateAsync(options);
+    }
+}`
+                }
+            ]
+        },
+        analytics: {
+            title: "Business Analytics Tool Simulatie",
+            tech: ['C#', 'WPF', 'Entity Framework', 'Chart.js'],
+            steps: [
+                {
+                    title: "Data Model",
+                    code: `// Analytics Data Model
+public class SalesData
+{
+    public DateTime Date { get; set; }
+    public decimal Revenue { get; set; }
+    public int Orders { get; set; }
+    public string Region { get; set; }
+}
+
+public class AnalyticsResult
+{
+    public decimal TotalRevenue { get; set; }
+    public decimal GrowthRate { get; set; }
+    public List<SalesData> MonthlyData { get; set; }
+}`
+                },
+                {
+                    title: "Data Service",
+                    code: `// Analytics Service
+public class AnalyticsService : IAnalyticsService
+{
+    private readonly ApplicationDbContext _context;
+
+    public async Task<AnalyticsResult> GetSalesAnalyticsAsync(DateTime startDate, DateTime endDate)
+    {
+        var salesData = await _context.Sales
+            .Where(s => s.Date >= startDate && s.Date <= endDate)
+            .GroupBy(s => new { s.Date.Month, s.Date.Year })
+            .Select(g => new SalesData
+            {
+                Date = new DateTime(g.Key.Year, g.Key.Month, 1),
+                Revenue = g.Sum(s => s.Amount),
+                Orders = g.Count()
+            })
+            .ToListAsync();
+
+        return new AnalyticsResult
+        {
+            TotalRevenue = salesData.Sum(s => s.Revenue),
+            MonthlyData = salesData
+        };
+    }
+}`
+                },
+                {
+                    title: "WPF View Model",
+                    code: `// Main View Model
+public class MainViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<SalesData> _salesData;
+    public ObservableCollection<SalesData> SalesData
+    {
+        get => _salesData;
+        set
+        {
+            _salesData = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public ICommand RefreshCommand { get; }
+
+    public MainViewModel()
+    {
+        RefreshCommand = new RelayCommand(async () => await LoadDataAsync());
+    }
+
+    private async Task LoadDataAsync()
+    {
+        var result = await _analyticsService.GetSalesAnalyticsAsync(
+            DateTime.Now.AddMonths(-12), 
+            DateTime.Now);
+        SalesData = new ObservableCollection<SalesData>(result.MonthlyData);
+    }
+}`
+                },
+                {
+                    title: "Chart Integration",
+                    code: `// Chart Configuration
+public void ConfigureChart()
+{
+    var chart = new Chart
+    {
+        Type = ChartType.Line,
+        Data = new ChartData
+        {
+            Labels = salesData.Select(s => s.Date.ToString("MMM yyyy")).ToArray(),
+            Datasets = new List<Dataset>
+            {
+                new LineDataset
+                {
+                    Label = "Revenue",
+                    Data = salesData.Select(s => s.Revenue).ToArray(),
+                    BorderColor = "#4CAF50",
+                    Fill = false
+                }
+            }
+        }
+    };
+}`
+                }
+            ]
+        },
+        // Vergelijkbare structuren voor api en database projecten...
+        api: {
+            title: "REST API Project Simulatie",
+            tech: ['ASP.NET Web API', 'JWT', 'Docker', 'Redis'],
+            steps: [
+                {
+                    title: "JWT Authentication",
+                    code: `// JWT Configuration
+services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = Configuration["Jwt:Issuer"],
+            ValidAudience = Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(Configuration["Jwt:Secret"]))
+        };
+    });`
+                },
+                {
+                    title: "API Controller met Auth",
+                    code: `// Secure API Controller
+[ApiController]
+[Authorize]
+[Route("api/[controller]")]
+public class FinancialController : ControllerBase
+{
+    [HttpGet("transactions")]
+    public async Task<ActionResult<List<Transaction>>> GetTransactions()
+    {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var transactions = await _transactionService.GetUserTransactionsAsync(userId);
+        return Ok(transactions);
+    }
+
+    [HttpPost("transfer")]
+    public async Task<ActionResult> TransferFunds(TransferRequest request)
+    {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        await _transactionService.TransferAsync(userId, request);
+        return Ok();
+    }
+}`
+                }
+            ]
+        },
+        database: {
+            title: "Database Migratie Simulatie",
+            tech: ['SQL Server', 'Azure SQL', 'ETL', 'Power BI'],
+            steps: [
+                {
+                    title: "Migratie Script",
+                    code: `-- Database Migratie Script
+BEGIN TRANSACTION
+
+-- Create Azure SQL compatible schema
+CREATE TABLE dbo.Customers (
+    CustomerId INT IDENTITY(1,1) PRIMARY KEY,
+    Email NVARCHAR(255) NOT NULL,
+    CreatedDate DATETIME2 DEFAULT GETUTCDATE(),
+    INDEX IX_Customers_Email (Email)
+);
+
+-- Data migratie
+INSERT INTO dbo.Customers (Email, CreatedDate)
+SELECT Email, CreatedDate 
+FROM legacy.Customers
+WHERE IsActive = 1;
+
+COMMIT TRANSACTION;`
+                },
+                {
+                    title: "Performance Optimalisatie",
+                    code: `-- Query Optimalisatie
+CREATE PROCEDURE dbo.GetCustomerOrders
+    @CustomerId INT,
+    @StartDate DATETIME2,
+    @EndDate DATETIME2
+AS
+BEGIN
+    SELECT 
+        o.OrderId,
+        o.TotalAmount,
+        o.OrderDate,
+        p.ProductName,
+        oi.Quantity
+    FROM dbo.Orders o
+    INNER JOIN dbo.OrderItems oi ON o.OrderId = oi.OrderId
+    INNER JOIN dbo.Products p ON oi.ProductId = p.ProductId
+    WHERE o.CustomerId = @CustomerId
+        AND o.OrderDate BETWEEN @StartDate AND @EndDate
+    ORDER BY o.OrderDate DESC;
+END;`
+                }
+            ]
+        }
+    };
+
+    let currentProject = null;
+    let currentStepIndex = 0;
+
+    // Open project simulation
+    projectButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const projectType = this.getAttribute('data-project');
+            openProjectSimulation(projectType);
+        });
+    });
+
+    function openProjectSimulation(projectType) {
+        const project = projectSimulations[projectType];
+        if (!project) return;
+
+        currentProject = project;
+        currentStepIndex = 0;
+
+        modalTitle.textContent = project.title;
+        
+        // Set technologies
+        modalTech.innerHTML = '';
+        project.tech.forEach(tech => {
+            const techTag = document.createElement('span');
+            techTag.className = 'tech-tag';
+            techTag.textContent = tech;
+            modalTech.appendChild(techTag);
+        });
+
+        // Set total steps
+        totalSteps.textContent = project.steps.length;
+
+        // Load first step
+        loadStep(currentStepIndex);
+
+        // Show modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function loadStep(stepIndex) {
+        if (!currentProject) return;
+
+        const step = currentProject.steps[stepIndex];
+        currentStep.textContent = stepIndex + 1;
+
+        // Update code preview with syntax highlighting
+        codePreview.innerHTML = `
+            <div class="code-header">
+                <div class="file-info">
+                    <span class="file-icon">📄</span>
+                    <span class="file-name">${step.title}</span>
+                </div>
+            </div>
+            <div class="code-content">
+                <pre><code class="language-csharp">${escapeHtml(step.code)}</code></pre>
+            </div>
+        `;
+
+        // Update button states
+        prevStep.disabled = stepIndex === 0;
+        nextStep.disabled = stepIndex === currentProject.steps.length - 1;
+    }
+
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    // Navigation
+    prevStep.addEventListener('click', () => {
+        if (currentStepIndex > 0) {
+            currentStepIndex--;
+            loadStep(currentStepIndex);
+        }
+    });
+
+    nextStep.addEventListener('click', () => {
+        if (currentStepIndex < currentProject.steps.length - 1) {
+            currentStepIndex++;
+            loadStep(currentStepIndex);
+        }
+    });
+
+    // Close modal
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        currentProject = null;
+        currentStepIndex = 0;
+    }
+
+    // Escape key to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Add hover effects
+    portfolioCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('flipped')) {
+                this.style.transform = 'translateY(-10px)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('flipped')) {
+                this.style.transform = 'translateY(0)';
+            }
+        });
+    });
+});
 </script>

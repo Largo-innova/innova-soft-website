@@ -11,58 +11,78 @@
                     <i class="fab fa-microsoft"></i>
                     <span>.NET Ecosystem</span>
                 </div>
-                                <div class="code-window">
-                    <div class="code-header">
-                        <div class="window-controls">
-                            <div class="control-dot close"></div>
-                            <div class="control-dot minimize"></div>
-                            <div class="control-dot maximize"></div>
-                        </div>
-                        <div class="file-info">
-                            <div class="file-icon">⚡</div>
-                            <span class="file-name">innovasoft.css</span>
-                        </div>
-                    </div>
-                    <div class="code-content">
-                        <div class="code-lines">
-                            <div class="code-line active">
-                                <span class="line-content">
-                                    <span class="code-keyword">public async</span> <span class="code-type">Task</span><<span class="code-type">ActionResult</span>> 
-                                </span>
-                            </div>
-                            <div class="code-line">
-                                <span class="line-content">
-                                    &nbsp;&nbsp;<span class="code-function">CreateBusinessSolution</span>()
-                                </span>
-                            </div>
-                            <div class="code-line">
-                                <span class="line-content">
-                                    &nbsp;&nbsp;{
-                                </span>
-                            </div>
-                            <div class="code-line">
-                                <span class="line-content">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">var</span> <span class="code-variable">result</span> = <span class="code-keyword">await</span> <span class="code-variable">_service</span>
-                                </span>
-                            </div>
-                            <div class="code-line">
-                                <span class="line-content">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="code-function">ProcessBusinessLogic</span>();
-                                </span>
-                            </div>
-                            <div class="code-line">
-                                <span class="line-content">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-variable">Ok</span>(<span class="code-variable">result</span>);
-                                </span>
-                            </div>
-                            <div class="code-line">
-                                <span class="line-content">
-                                    &nbsp;&nbsp;}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="code-window">
+        <div class="tilt-wrapper">
+    <div class="code-header">
+        <div class="window-controls">
+            <div class="control-dot close"></div>
+            <div class="control-dot minimize"></div>
+            <div class="control-dot maximize"></div>
+        </div>
+        <div class="file-info">
+            <span class="file-icon">⚡</span>
+            <span class="file-name">innovasoft.css</span>
+        </div>
+    
+    </div>
+    </div>
+
+    <div class="code-content">
+        <div class="code-lines">
+
+            <div class="code-line">
+                    <span class="code-keyword">public async</span> <span class="code-type">Task</span><<span class="code-type">IActionResult</span>> <span class="code-function"></span>(<span class="code-type">BusinessRequest</span> <span class="code-variable">request</span>)
+            </div>
+
+            <div class="code-line">
+                    {
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;<span class="code-comment">// Validate incoming request</span>
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;<span class="code-keyword">if</span> (<span class="code-variable">request</span> == <span class="code-keyword">null</span>)
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-variable">BadRequest</span>(<span class="code-string">"Invalid payload."</span>);
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;<span class="code-comment">// Process request using domain service</span>
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;<span class="code-keyword">var</span> <span class="code-variable">result</span> = <span class="code-keyword">await</span> <span class="code-variable"></span>.<span class="code-function">ProcessBusinessLogicAsync</span>(<span class="code-variable">request</span>);
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;<span class="code-keyword">if</span> (!<span class="code-variable">result</span>.<span class="code-variable">Success</span>)
+            </div>
+
+            <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-variable">StatusCode</span>(<span class="code-number">500</span>, <span class="code-variable">result</span>.<span class="code-variable">ErrorMessage</span>);
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="code-status">
+        <div class="status-left">
+            <span class="status-item">UTF-8</span>
+        </div>
+        <div class="status-right">
+            <span class="status-item">Ln 12, Col 5</span>
+        </div>
+    </div>
+</div>
+
+
+
                 <br><br><br>
                 <div class="floating-card card-2">
                     <i class="fas fa-cloud"></i>
