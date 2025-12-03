@@ -13,6 +13,7 @@ class InnovaSoftWebsite {
         this.initTypewriter();
         console.log('🚀 Innova Soft Ultimate Website geladen');
     }
+    
     // Portfolio filter functionality
     initPortfolioFilters() {
         const filterButtons = document.querySelectorAll('.filter-btn');
@@ -48,6 +49,7 @@ class InnovaSoftWebsite {
             });
         }
     }
+    
     // Navigation functionality
     initNavigation() {
         const navToggle = document.getElementById('nav-toggle');
@@ -242,45 +244,7 @@ class InnovaSoftWebsite {
             existingError.remove();
         }
     }
-    // Navigation functionality
-    initNavigation() {
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        const navbar = document.querySelector('.navbar');
 
-        if (navToggle && navMenu) {
-            navToggle.addEventListener('click', () => {
-                navToggle.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-            });
-
-            // Close mobile menu when clicking on links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-
-        // Navbar scroll effect
-        if (navbar) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-
-            // Initialize scroll state
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            }
-        }
-    }
     showNotification(message, type = 'info') {
         // Remove existing notifications
         const existingNotification = document.querySelector('.notification');
@@ -395,302 +359,406 @@ class InnovaSoftWebsite {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
-         
         });
     }
 
     // Typewriter effect for hero title
-initTypewriter() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
+    initTypewriter() {
+        const heroTitle = document.querySelector('.hero-title');
+        if (!heroTitle) return;
 
-    const texts = [
-        "IT-Optimalisatie",
-        ".NET Solutions", 
-        "Systeembeheer",
-        "Software Design",
-        "Digitale Projecten",
-        "IT-Partnerschap"
-    ];
-    
-    // Maak een container voor de typewriter tekst
-    const typewriterContainer = document.createElement('div');
-    typewriterContainer.className = 'typewriter-container';
-    typewriterContainer.style.position = 'relative';
-    typewriterContainer.style.display = 'inline-block';
-    
-    const highlightElement = heroTitle.querySelector('.title-highlight');
-    const placeholderElement = document.createElement('span');
-    
-    if (highlightElement) {
-        // Vervang het highlight element door onze container
-        highlightElement.parentNode.insertBefore(typewriterContainer, highlightElement);
-        typewriterContainer.appendChild(highlightElement);
+        const texts = [
+            "IT-Optimalisatie",
+            ".NET Solutions", 
+            "Systeembeheer",
+            "Software Design",
+            "Digitale Projecten",
+            "IT-Partnerschap"
+        ];
         
-        // Voeg een placeholder toe voor vaste breedte
-        placeholderElement.textContent = texts.reduce((a, b) => a.length > b.length ? a : b);
-        placeholderElement.style.visibility = 'hidden';
-        placeholderElement.style.height = '0';
-        placeholderElement.style.display = 'inline-block';
-        typewriterContainer.insertBefore(placeholderElement, highlightElement);
+        // Maak een container voor de typewriter tekst
+        const typewriterContainer = document.createElement('div');
+        typewriterContainer.className = 'typewriter-container';
+        typewriterContainer.style.position = 'relative';
+        typewriterContainer.style.display = 'inline-block';
         
-        // Positioneer het highlight element absoluut
-        highlightElement.style.position = 'absolute';
-        highlightElement.style.left = '0';
-        highlightElement.style.top = '0';
-        highlightElement.style.margin = '0';
-        highlightElement.style.padding = '0';
-    }
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
-
-    function type() {
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            charIndex--;
-            typingSpeed = 50;
-        } else {
-            charIndex++;
-            typingSpeed = 100;
-        }
-
-        const displayedText = currentText.substring(0, charIndex);
+        const highlightElement = heroTitle.querySelector('.title-highlight');
+        const placeholderElement = document.createElement('span');
         
         if (highlightElement) {
-            highlightElement.textContent = displayedText;
+            // Vervang het highlight element door onze container
+            highlightElement.parentNode.insertBefore(typewriterContainer, highlightElement);
+            typewriterContainer.appendChild(highlightElement);
+            
+            // Voeg een placeholder toe voor vaste breedte
+            placeholderElement.textContent = texts.reduce((a, b) => a.length > b.length ? a : b);
+            placeholderElement.style.visibility = 'hidden';
+            placeholderElement.style.height = '0';
+            placeholderElement.style.display = 'inline-block';
+            typewriterContainer.insertBefore(placeholderElement, highlightElement);
+            
+            // Positioneer het highlight element absoluut
+            highlightElement.style.position = 'absolute';
+            highlightElement.style.left = '0';
+            highlightElement.style.top = '0';
+            highlightElement.style.margin = '0';
+            highlightElement.style.padding = '0';
+        }
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                charIndex++;
+                typingSpeed = 100;
+            }
+
+            const displayedText = currentText.substring(0, charIndex);
+            
+            if (highlightElement) {
+                highlightElement.textContent = displayedText;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 1000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typingSpeed = 500;
+            }
+
+            setTimeout(type, typingSpeed);
         }
 
-        if (!isDeleting && charIndex === currentText.length) {
-            isDeleting = true;
-            typingSpeed = 1000;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-            typingSpeed = 500;
-        }
+        setTimeout(type, 1000);
+    }
+}
 
-        setTimeout(type, typingSpeed);
+// Cookie Consent Management - AVG/GDPR Compliant Version
+class CookieConsentManager {
+    constructor() {
+        this.init();
     }
 
-    setTimeout(type, 1000);
-}
-}
-
-// Initialize website when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new InnovaSoftWebsite();
-});
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-// Cookie Consent Management
-document.addEventListener('DOMContentLoaded', function() {
-    const cookieBanner = document.getElementById('cookieBanner');
-    const cookieConsent = document.getElementById('cookieConsent');
-    const cookieClose = document.getElementById('cookieClose');
-    const detailsToggle = document.getElementById('detailsToggle');
-    const detailsContent = document.getElementById('detailsContent');
-    
-    // Buttons
-    const bannerAccept = document.getElementById('bannerAccept');
-    const bannerCustomize = document.getElementById('bannerCustomize');
-    const rejectAll = document.getElementById('rejectAll');
-    const acceptSelected = document.getElementById('acceptSelected');
-    const acceptAll = document.getElementById('acceptAll');
-    
-    // Cookie checkboxes
-    const analyticsCookies = document.getElementById('analyticsCookies');
-    const marketingCookies = document.getElementById('marketingCookies');
-
-    // Check if user has already made a choice
-    const hasConsent = getCookie('cookie_consent');
-    
-    if (!hasConsent) {
-        // Show banner after a short delay
-        setTimeout(() => {
-            cookieBanner.classList.add('show');
-        }, 1000);
-    }
-
-    // Banner Accept (Essential only)
-    bannerAccept.addEventListener('click', function() {
-        setCookieConsent('essential');
-        cookieBanner.classList.remove('show');
-        showThankYouMessage('Bedankt! Uw voorkeuren zijn opgeslagen.');
-    });
-
-    // Banner Customize
-    bannerCustomize.addEventListener('click', function() {
-        cookieBanner.classList.remove('show');
-        setTimeout(() => {
-            cookieConsent.classList.add('show');
-        }, 300);
-    });
-
-    // Close popup
-    cookieClose.addEventListener('click', function() {
-        cookieConsent.classList.remove('show');
-        // Show banner again if no choice was made
-        if (!getCookie('cookie_consent')) {
-            setTimeout(() => {
-                cookieBanner.classList.add('show');
-            }, 500);
-        }
-    });
-
-    // Toggle details
-    detailsToggle.addEventListener('click', function() {
-        detailsContent.classList.toggle('show');
-        detailsToggle.classList.toggle('active');
-    });
-
-    // Reject All (Essential only)
-    rejectAll.addEventListener('click', function() {
-        analyticsCookies.checked = false;
-        marketingCookies.checked = false;
-        setCookieConsent('essential');
-        cookieConsent.classList.remove('show');
-        showThankYouMessage('Alleen noodzakelijke cookies geaccepteerd.');
-    });
-
-    // Accept Selected
-    acceptSelected.addEventListener('click', function() {
-        const preferences = {
-            analytics: analyticsCookies.checked,
-            marketing: marketingCookies.checked
+    init() {
+        this.elements = {
+            cookieBanner: document.getElementById('cookieBanner'),
+            cookieConsent: document.getElementById('cookieConsent'),
+            cookieClose: document.getElementById('cookieClose'),
+            detailsToggle: document.getElementById('detailsToggle'),
+            detailsContent: document.getElementById('detailsContent'),
+            bannerAccept: document.getElementById('bannerAccept'),
+            bannerCustomize: document.getElementById('bannerCustomize'),
+            rejectAll: document.getElementById('rejectAll'),
+            acceptSelected: document.getElementById('acceptSelected'),
+            acceptAll: document.getElementById('acceptAll'),
+            analyticsCookies: document.getElementById('analyticsCookies'),
+            marketingCookies: document.getElementById('marketingCookies')
         };
-        setCookieConsent('selected', preferences);
-        cookieConsent.classList.remove('show');
-        showThankYouMessage('Uw cookie voorkeuren zijn opgeslagen.');
-    });
 
-    // Accept All
-    acceptAll.addEventListener('click', function() {
-        analyticsCookies.checked = true;
-        marketingCookies.checked = true;
-        setCookieConsent('all');
-        cookieConsent.classList.remove('show');
-        showThankYouMessage('Alle cookies geaccepteerd. Bedankt!');
-    });
+        this.checkConsent();
+        this.bindEvents();
+    }
 
-    // Cookie management functions
-    function setCookieConsent(type, preferences = {}) {
+    checkConsent() {
+        const consent = this.getConsent();
+        
+        if (!consent) {
+            // NO consent yet - show banner IMMEDIATELY and block non-essential cookies
+            this.showBanner();
+            this.blockNonEssentialCookies();
+        } else {
+            // Apply existing consent
+            this.applyConsent(consent);
+            
+            // Update UI to reflect current choices
+            if (this.elements.analyticsCookies) {
+                this.elements.analyticsCookies.checked = consent.analytics || false;
+            }
+            if (this.elements.marketingCookies) {
+                this.elements.marketingCookies.checked = consent.marketing || false;
+            }
+        }
+    }
+
+    showBanner() {
+        if (this.elements.cookieBanner) {
+            // Show immediately - NO DELAY for GDPR compliance
+            this.elements.cookieBanner.classList.add('show');
+        }
+    }
+
+    blockNonEssentialCookies() {
+        // Block analytics and marketing cookies BEFORE consent
+        window['ga-disable-UA-XXXXX-Y'] = true; // Replace with your GA ID
+        
+        // Block Facebook Pixel
+        if (window.fbq) {
+            window.fbq = function() {
+                console.log('Facebook Pixel blocked - no consent');
+            };
+        }
+        
+        console.log('GDPR: Non-essential cookies blocked until consent');
+    }
+
+    bindEvents() {
+        if (this.elements.bannerAccept) {
+            this.elements.bannerAccept.addEventListener('click', () => {
+                this.setConsent({ analytics: false, marketing: false });
+                this.hideBanner();
+                this.showNotification('Alleen noodzakelijke cookies geaccepteerd.', 'success');
+            });
+        }
+
+        if (this.elements.bannerCustomize) {
+            this.elements.bannerCustomize.addEventListener('click', () => {
+                this.hideBanner();
+                this.showCustomize();
+            });
+        }
+
+        if (this.elements.cookieClose) {
+            this.elements.cookieClose.addEventListener('click', () => {
+                this.hideCustomize();
+                // Show banner again if no choice was made
+                if (!this.getConsent()) {
+                    setTimeout(() => this.showBanner(), 300);
+                }
+            });
+        }
+
+        if (this.elements.detailsToggle) {
+            this.elements.detailsToggle.addEventListener('click', () => {
+                this.elements.detailsContent.classList.toggle('show');
+                this.elements.detailsToggle.classList.toggle('active');
+            });
+        }
+
+        if (this.elements.rejectAll) {
+            this.elements.rejectAll.addEventListener('click', () => {
+                if (this.elements.analyticsCookies) this.elements.analyticsCookies.checked = false;
+                if (this.elements.marketingCookies) this.elements.marketingCookies.checked = false;
+                this.setConsent({ analytics: false, marketing: false });
+                this.hideCustomize();
+                this.showNotification('Alleen noodzakelijke cookies geaccepteerd.', 'success');
+            });
+        }
+
+        if (this.elements.acceptSelected) {
+            this.elements.acceptSelected.addEventListener('click', () => {
+                const analytics = this.elements.analyticsCookies ? this.elements.analyticsCookies.checked : false;
+                const marketing = this.elements.marketingCookies ? this.elements.marketingCookies.checked : false;
+                this.setConsent({ analytics, marketing });
+                this.hideCustomize();
+                this.showNotification('Uw cookievoorkeuren zijn opgeslagen.', 'success');
+            });
+        }
+
+        if (this.elements.acceptAll) {
+            this.elements.acceptAll.addEventListener('click', () => {
+                if (this.elements.analyticsCookies) this.elements.analyticsCookies.checked = true;
+                if (this.elements.marketingCookies) this.elements.marketingCookies.checked = true;
+                this.setConsent({ analytics: true, marketing: true });
+                this.hideCustomize();
+                this.showNotification('Alle cookies geaccepteerd.', 'success');
+            });
+        }
+    }
+
+    hideBanner() {
+        if (this.elements.cookieBanner) {
+            this.elements.cookieBanner.classList.remove('show');
+        }
+    }
+
+    showCustomize() {
+        if (this.elements.cookieConsent) {
+            setTimeout(() => {
+                this.elements.cookieConsent.classList.add('show');
+            }, 300);
+        }
+    }
+
+    hideCustomize() {
+        if (this.elements.cookieConsent) {
+            this.elements.cookieConsent.classList.remove('show');
+        }
+    }
+
+    setConsent(preferences) {
         const consent = {
             essential: true,
-            analytics: type === 'all' || (type === 'selected' && preferences.analytics),
-            marketing: type === 'all' || (type === 'selected' && preferences.marketing),
-            timestamp: new Date().toISOString()
+            analytics: preferences.analytics || false,
+            marketing: preferences.marketing || false,
+            timestamp: new Date().toISOString(),
+            version: 'gdpr-1.0'
         };
         
-        // Set cookie for 1 year
-        setCookie('cookie_consent', JSON.stringify(consent), 365);
+        // Save for 13 months (GDPR max: 12 months + 1 month for renewal notice)
+        this.setCookie('cookie_consent_gdpr', JSON.stringify(consent), 395);
         
-        // Apply cookie settings
-        applyCookieSettings(consent);
+        // Apply the consent settings
+        this.applyConsent(consent);
     }
 
-    function applyCookieSettings(consent) {
+    applyConsent(consent) {
+        // Essential cookies are always active
+        console.log('Essential cookies: Active');
+        
+        // Analytics cookies - only if consented
         if (consent.analytics) {
-            enableAnalyticsCookies();
+            this.enableAnalytics();
         } else {
-            disableAnalyticsCookies();
+            this.disableAnalytics();
         }
         
+        // Marketing cookies - only if consented
         if (consent.marketing) {
-            enableMarketingCookies();
+            this.enableMarketing();
         } else {
-            disableMarketingCookies();
+            this.disableMarketing();
         }
+    }
+
+    enableAnalytics() {
+        console.log('Analytics cookies: Enabled');
+        // Initialize your analytics tools here
+        // Example for Google Analytics:
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
+        // gtag('config', 'UA-XXXXX-Y');
+    }
+
+    disableAnalytics() {
+        console.log('Analytics cookies: Disabled');
+        // Ensure analytics are disabled
+        window['ga-disable-UA-XXXXX-Y'] = true;
+    }
+
+    enableMarketing() {
+        console.log('Marketing cookies: Enabled');
+        // Initialize marketing tools here
+        // Example for Facebook Pixel:
+        // !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?...
+    }
+
+    disableMarketing() {
+        console.log('Marketing cookies: Disabled');
+        // Ensure marketing tools are disabled
+    }
+
+    getConsent() {
+        const cookie = this.getCookie('cookie_consent_gdpr');
+        if (!cookie) return null;
         
-        // Always enable essential cookies
-        enableEssentialCookies();
+        try {
+            return JSON.parse(cookie);
+        } catch (e) {
+            console.error('Error parsing cookie consent:', e);
+            return null;
+        }
     }
 
-    function enableAnalyticsCookies() {
-        console.log('Analytics cookies enabled');
-        // Add your analytics code here (Google Analytics, etc.)
-    }
-
-    function disableAnalyticsCookies() {
-        console.log('Analytics cookies disabled');
-        // Disable your analytics tracking here
-    }
-
-    function enableMarketingCookies() {
-        console.log('Marketing cookies enabled');
-        // Add your marketing tracking code here
-    }
-
-    function disableMarketingCookies() {
-        console.log('Marketing cookies disabled');
-        // Disable marketing tracking here
-    }
-
-    function enableEssentialCookies() {
-        console.log('Essential cookies enabled');
-        // Essential cookies are always enabled
-    }
-
-    // Utility functions
-    function setCookie(name, value, days) {
+    setCookie(name, value, days) {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+        const secure = window.location.protocol === 'https:' ? ';Secure' : '';
+        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/;SameSite=Strict" + secure;
     }
 
-    function getCookie(name) {
+    getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
         }
         return null;
     }
 
-    function showThankYouMessage(message) {
-        // Create a temporary notification
+    showNotification(message, type = 'success') {
         const notification = document.createElement('div');
+        notification.className = `cookie-notification cookie-notification-${type}`;
         notification.style.cssText = `
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: var(--success);
+            background: ${type === 'success' ? '#10b981' : '#3b82f6'};
             color: white;
             padding: 12px 20px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             z-index: 10000;
             font-weight: 500;
+            max-width: 300px;
+            animation: slideInRight 0.3s ease;
         `;
         notification.textContent = message;
         document.body.appendChild(notification);
         
         setTimeout(() => {
-            notification.remove();
-        }, 3000);
+            if (notification.parentElement) {
+                notification.style.animation = 'slideOutRight 0.3s ease forwards';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 4000);
     }
+}
 
-    // Initialize based on existing consent
-    const existingConsent = getCookie('cookie_consent');
-    if (existingConsent) {
-        try {
-            const consent = JSON.parse(existingConsent);
-            applyCookieSettings(consent);
+// Initialize website when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new InnovaSoftWebsite();
+    
+    // Initialize cookie consent manager if elements exist
+    if (document.getElementById('cookieBanner') || document.getElementById('cookieConsent')) {
+        new CookieConsentManager();
+    }
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // Add animation styles for cookie notifications
+    if (!document.querySelector('#cookie-notification-styles')) {
+        const styles = document.createElement('style');
+        styles.id = 'cookie-notification-styles';
+        styles.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
             
-            // Update toggle states in popup if open
-            if (consent.analytics) analyticsCookies.checked = true;
-            if (consent.marketing) marketingCookies.checked = true;
-        } catch (e) {
-            console.error('Error parsing cookie consent:', e);
-        }
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(styles);
     }
 });
